@@ -1,0 +1,7 @@
+org: 3h4xx
+app: test-app
+service: test-service
+
+provider:
+  name: aws
+
