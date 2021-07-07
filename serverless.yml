@@ -1,7 +1,17 @@
-org: 3h4xx
 app: test-app
 service: test-service
 
 provider:
   name: aws
+  runtime: python3.8
+  region: eu-west-1
+  memorySize: 512
 
+
+functions:
+  hello:
+    handler: app.lambda_handler
+    events:
+      - http:
+          path: hello
+          method: get
